@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController } from 'ionic-angular';
 import { UsuarioPage } from '../usuario/usuario';
 
 @Component({
@@ -28,7 +28,10 @@ usuario = UsuarioPage;
     });
     alert.present();
    }
-
   }
+
+  //  iniciarSesion() {
+  //   let index = this.personas.findIndex(persona => persona.presona == )
+  //  }
 
 }
