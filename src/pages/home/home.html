@@ -1,26 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Login
+      Profile
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-<ion-list>
-  <ion-card>
-    <img [src] = persona.imagen>
-  </ion-card>
-  <ion-item>
-    <ion-input [(ngModel)]="persona.nombre" placeholder = "Nombre" ></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="persona.contra" type="password" placeholder = "Contraseña" ></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="persona.email" placeholder = "Email" ></ion-input>
-  </ion-item>
-    <button ion-button block (click)='registro()'>Regístrate</button>
-    <button ion-button block (click)='iniciarSesion()'>Login</button>
-</ion-list>
+  <div padding>
+    <ion-label style= "text-align: center">¿Qué deseas hacer?</ion-label>
+    <ion-row>
+        <button ion-button block (click)='iniciarSesion()'>Login</button>
+    </ion-row>
+    <ion-row>
+        <button ion-button block (click)='nuevoUsuario()'>Regístrate</button>
+    </ion-row>
+  </div>
 </ion-content>
