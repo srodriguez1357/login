@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { UsuarioPage } from '../usuario/usuario';
 
 /**
  * Generated class for the LoginPage page.
@@ -14,6 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+personas = [];
+persona = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -22,8 +25,11 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  login() {
-    
+  login(p) {
+    let index = this.personas.findIndex(persona => persona.persona == p.persona);
+    if (index >= 0) {
+      this.navCtrl.push(UsuarioPage);
+    }
   }
 
 }

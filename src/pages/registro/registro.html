@@ -16,19 +16,19 @@
 <ion-content padding>
     <ion-list>
         <ion-card>
-          <img [src] = persona.imagen>
+          <img [src] = imagen>
         </ion-card>
         <ion-item>
           <ion-label floating>Nombre</ion-label>
-          <ion-input [(ngModel)]="persona.nombre"></ion-input>
+          <ion-input [(ngModel)]="nombre"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Contraseña</ion-label>
-          <ion-input [(ngModel)]="persona.contra" type="password"></ion-input>
+          <ion-input [(ngModel)]="contra" type="password"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Email</ion-label>
-          <ion-input [(ngModel)]="persona.email"></ion-input>
+          <ion-input [(ngModel)]="email"></ion-input>
         </ion-item>
         <div padding>
           <button ion-button block (click)='registro()'>Regístrate</button>
