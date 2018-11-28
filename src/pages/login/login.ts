@@ -17,6 +17,7 @@ import { UsuarioPage } from '../usuario/usuario';
 export class LoginPage {
 personas = [];
 persona = "";
+imagen = '../assets/user.png'
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

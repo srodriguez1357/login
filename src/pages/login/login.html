@@ -7,15 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title style="background-color: #73BA9B">login</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style="background-color: #73BA9B">
     <ion-list>
-        <ion-card>
+        <ion-card style="border-radius: 130px">
           <img [src] = imagen>
         </ion-card>
         <ion-item>
@@ -31,7 +31,7 @@
           <ion-input [(ngModel)]="email"></ion-input>
         </ion-item>
         <div padding>
-          <button ion-button block (click)='login()'>Regístrate</button>
+          <button ion-button block (click)='login()'>Inicia Sesión</button>
         </div>
       </ion-list>
 </ion-content>
