@@ -28,7 +28,7 @@ contra = "";
   }
 
   iniciarSesion() {
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.push(LoginPage, {personas: this.personas});
   }
 
   nuevoUsuario() {

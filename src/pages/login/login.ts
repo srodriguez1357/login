@@ -21,13 +21,14 @@ email_received = "";
 imagen = '../assets/user.png'
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alert: AlertController) {
+  this.personas = this.navParams.get('personas');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  login(p) {
+  login() {
      let index = this.personas.findIndex(persona => persona.persona == this.email_received && persona.contra == this.contra_received);
      if (index > 0) {
       this.navCtrl.push(UsuarioPage);

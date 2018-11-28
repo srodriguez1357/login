@@ -23,7 +23,7 @@ imagen = '../assets/user.png';
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public storage: Storage) {
-  this.personas = this.navParams.get('usuarios');
+  this.personas = this.navParams.get('personas');
   }
 
   ionViewDidLoad() {
