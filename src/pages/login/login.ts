@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { UsuarioPage } from '../usuario/usuario';
 
 /**
@@ -16,10 +16,11 @@ import { UsuarioPage } from '../usuario/usuario';
 })
 export class LoginPage {
 personas = [];
-persona = "";
+contra_received = "";
+email_received = "";
 imagen = '../assets/user.png'
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alert: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -27,9 +28,14 @@ imagen = '../assets/user.png'
   }
 
   login(p) {
-    let index = this.personas.findIndex(persona => persona.persona == p.persona);
-    if (index >= 0) {
+     let index = this.personas.findIndex(persona => persona.persona == this.email_received && persona.contra == this.contra_received);
+     if (index > 0) {
       this.navCtrl.push(UsuarioPage);
+      const alert = this.alert.create({
+        title: 'Bienvenido de nuevo',
+        subTitle: 'Ya te habías registrado antes'
+      });
+      alert.present();
     }
   }
 

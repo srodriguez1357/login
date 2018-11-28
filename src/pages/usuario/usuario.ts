@@ -14,10 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'usuario.html',
 })
 export class UsuarioPage {
-
+personas = [];
+email = '';
+contra = '';
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  this.navParams.get('persona');
+  this.navParams.get('personas');
   }
 
   ionViewDidLoad() {

@@ -15,12 +15,12 @@
 
 <ion-content padding style="background-color: #00A8E8">
 <ion-list>
-  <ion-card style="border-radius: 130px">
+  <ion-card style="border-radius: 150px" *ngFor='let p of personas'>
   <ion-avatar item-start>
     <img [src] = imagen >
   </ion-avatar>
   <ion-item>
-    {{mail}}
+    {{p.email}}
   </ion-item>
   </ion-card>
 </ion-list>
